@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment-1</title>
+    <link rel="stylesheet" href="Phy-exp1.css">
+</head>
+<body>
+    
+    <div id="title">
+        <p style="width: 250px; cursor: pointer;"><strong>Chemistry Experiment</strong></p>
+      </div>
+      <div id="exptitle">
+        Experiment-1 | Phenol Formaldehyde
+      </div>
+      <div id="sidebar">
+        <br>
+        <ul>
+          <li class="side active" onclick=change(0)>Aim</li>
+          <li class="side" onclick=change(1)>Theory</li>
+          <li class="side" onclick=change(2)>Pre Test</li>
+          <li class="side" onclick=change(3)>Procedure</li>
+          <li class="side" onclick=change(4)>Simulation</li>
+          <li class="side" onclick=change(5)>Post Test</li>
+          <li class="side" onclick=change(6)>Feedback</li>
+        </ul>
+      </div> 
+      <div class="content visible">
+          <h3 class="con-title">Aim<br></h3>
+          <p>
+          </p>
+      </div>
+      <div class="content">
+          <h3 class="con-title">Theory<br></h3>
+            <img src="" alt=""><br>  
+      </div> 
+      <div class="content">
+        <h3 class="con-title">Pre Test<br></h3>
+      </div> 
+      <div class="content">
+          <h3 class="con-title">Procedure<br></h3>
+          
+      </div> 
+      <div class="content">
+          <h3 class="con-title">Simulation<br><br></h3>
+        <a href="#" style="margin-left: 15px;">Click here for Simulation</a>
+  
+      </div> 
+      <div class="content">
+          <h3 class="con-title">Post Test<br></h3>
+
+      </div> 
+      <div class="content">
+          <h3 class="con-title">Feedback Form<br></h3>
+         
+      </div> 
+  <script>
+      function change(x){
+        var side=document.getElementsByClassName("side");
+        var main=document.getElementsByClassName("content");
+        side[x].classList.add("active");
+        main[x].classList.add("visible");
+        for(var i=0;i<side.length;i++)
+        {
+              if(i != x)
+              {
+                    side[i].classList.remove("active");
+                    main[i].classList.remove("visible");
+              }
+        }
+  }
+  
+  function check(){
+    if(document.querySelector('input[name="q1"]:checked').value == 4)
+        document.getElementById("a1").innerHTML = "1) Correct";
+    else
+        document.getElementById("a1").innerHTML =  "1) Wrong";
+    if(document.querySelector('input[name="q2"]:checked').value == 2)
+        document.getElementById("a2").innerHTML = "2) Correct";
+    else
+        document.getElementById("a2").innerHTML =  "2) Wrong";
+            
+  }
+  
+  function check1(){
+    if(document.querySelector('input[name="q11"]:checked').value == 2)
+        document.getElementById("a11").innerHTML = "1) Correct";
+    else
+        document.getElementById("a11").innerHTML =  "1) Wrong";
+    if(document.querySelector('input[name="q22"]:checked').value == 4)
+        document.getElementById("a22").innerHTML = "2) Correct";
+    else
+        document.getElementById("a22").innerHTML =  "2) Wrong";
+    if(document.querySelector('input[name="q33"]:checked').value == 2)
+        document.getElementById("a33").innerHTML = "3) Correct";
+    else
+        document.getElementById("a33").innerHTML =  "3) Wrong";
+  
+    if(document.querySelector('input[name="q44"]:checked').value == 4)
+        document.getElementById("a44").innerHTML = "4) Correct";
+    else
+        document.getElementById("a44").innerHTML =  "4) Wrong";
+            
+  }
+  </script>
+</body>
+</html>
